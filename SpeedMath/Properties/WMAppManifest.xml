@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{d3448f8b-3125-4be5-9e2c-5f09e9df7c2e}" Title="Mathbrain" RuntimeType="Silverlight" Version="1.0.1.0" Genre="apps.normal" Author="Amal Dev" Description="How long it takes for you to perform 30 calculations???&#xD;&#xA;Calculations involving only Addition, subtraction, multiplication or division operations with rising difficulty as the challenge progress...&#xD;&#xA;" Publisher="fireworkshop" BitsPerPixel="32">
+    <IconPath IsRelative="true" IsResource="false">icon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_MEDIALIB" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_GAMERSERVICES" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="SpeedMathToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">icon.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Mathbrain</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

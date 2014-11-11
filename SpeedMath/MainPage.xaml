@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    x:Class="Mathbrain.MainPage"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="Mathbrain" TextAlignment="Center" Margin="1,-7,9,0" Style="{StaticResource PhoneTextTitle1Style}" RenderTransformOrigin="0.5,0.5" FontSize="96">
+                <TextBlock.Projection>
+                    <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0"/>
+                </TextBlock.Projection>
+            </TextBlock>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <Button Content="Highscores" x:Name="hs" Margin="70,176,70,0" VerticalAlignment="Top" BorderThickness="0" Width="323" HorizontalAlignment="Center"  Background="{StaticResource PhoneAccentBrush}" BorderBrush="{StaticResource PhoneAccentBrush}" Height="82">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/Highscores.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Content="Help&#xD;&#xA;&#xD;&#xA;" x:Name="how" Click="how_Click" Margin="70,275,70,0" VerticalAlignment="Top" BorderThickness="0" Width="323" HorizontalAlignment="Center"  Background="{StaticResource PhoneAccentBrush}" BorderBrush="{StaticResource PhoneAccentBrush}" Height="82"/>
+            <Button Content="Credits&#xD;&#xA;" x:Name="about" Margin="70,375,70,0" VerticalAlignment="Top" BorderThickness="0" Width="323" HorizontalAlignment="Center"  Background="{StaticResource PhoneAccentBrush}" BorderBrush="{StaticResource PhoneAccentBrush}" Height="82" Click="about_Click"/>
+            <Button Content="Play" x:Name="play" Margin="70,76,70,0" VerticalAlignment="Top" BorderThickness="0" Width="323" HorizontalAlignment="Center" Click="play_Click" BorderBrush="{StaticResource PhoneAccentBrush}" Height="82" Background="{StaticResource PhoneAccentBrush}" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <CompositeTransform/>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>

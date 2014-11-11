@@ -1,0 +1,78 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Mathbrain.PanoramaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton x:Name="Play" IconUri="/Assets/AppBar/appbar.transport.play.rest.png" IsEnabled="True" Text="Play" Click="ApplicationBar_Play"/>
+            <shell:ApplicationBarIconButton x:Name="Review" IsEnabled="True" Text="Rate Us" IconUri="/Assets/AppBar/appbar.favs.rest.png" Click="Review_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Panorama x:Name="PanoramaControl" Title="Mathbrain">
+
+            <!--Panorama item one-->
+            <controls:PanoramaItem Name="itemhow" Header="Help">
+                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                    <TextBlock x:Name="how" TextWrapping="Wrap" Style="{StaticResource PhoneTextTitle3Style}">
+                		<Run Text="How long it takes for you to perform 30 calculations"/>
+                		<Run Text="???"/>
+                		<LineBreak/>
+                		<Run Text="Calculations involving only Addition, subtraction, multiplication or division operations with rising difficulty as the challenge progress... "/>
+                		<Run Text="There won't be any decimal or negative numbers to consider in any questions or answers... You may consider this in your strategy..."/>
+                		<LineBreak/>
+                		<LineBreak/>
+                		<Run Text="Also keep in mind that each wrong answer has a one second penalty..."/>
+                		<Run Text=" ;)"/>
+                    </TextBlock>
+
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Name="itemabout" Header="Credits">
+                <TextBlock HorizontalAlignment="Left" Height="426" TextWrapping="Wrap" VerticalAlignment="Top" Width="420">
+            		<Run FontSize="36" Text="Fireworkshop"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="Programing and Testing"/>
+            		<LineBreak/>
+            		<Run FontSize="24" Text="Amal Dev"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="Graphics"/>
+            		<LineBreak/>
+            		<Run FontSize="24" Text="Devakanth"/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="Excepting your appreciation, suggestions and complaints."/>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Run Text="Contact:"/>
+            		<LineBreak/>
+            		<Run Text="fireworkshopteam@gmail.com"/>
+            		<LineBreak/>
+            		<Run/>
+                </TextBlock>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>
